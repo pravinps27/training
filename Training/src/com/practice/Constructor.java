@@ -2,9 +2,13 @@ package com.practice;
 
 public class Constructor {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	int id;
+	String name;
+	long phoneNo;
+	String address;
+	
+	Constructor(int id, String name){
+		this.id=id;
+		this.name=name;
 	}
-
 }
