@@ -1,7 +1,7 @@
 
 public class Constructorr {
 
-	int id;
+	/*int id;
 	String name;
 	long phoneNo;
 	String address;
@@ -11,5 +11,8 @@ public class Constructorr {
 	 Constructorr (int id, String name){
 		this.id=id;
 		this.name=name;
-	}
+	}*/
+	int a=9;
+	sysout
 }
+
