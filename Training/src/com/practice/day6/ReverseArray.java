@@ -9,6 +9,7 @@ public class ReverseArray {
 		System.out.println("Enter the Numbers count:");
 		int count = ps.nextInt();
 		int arr[] = new int[count];
+		
 		int arr2[] = new int[arr.length];
 		System.out.println("Enter the Numbers:");
 		for (int i = 0; i < count; i++) {
@@ -21,9 +22,9 @@ public class ReverseArray {
 		
 		
 		System.out.println("Reverse Array:");
-		for (int i = arr.length - 1; i >= 0; i--) {
+		for (int i = arr2.length - 1; i >= 0; i--) {
 
-			System.out.println(arr[i] + " ");
+			System.out.println(arr2[i] + " ");
 		}
 
 	}
