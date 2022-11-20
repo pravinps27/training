@@ -6,6 +6,8 @@ public class CalculatorObject {
 		addition();
 		subtraction();
 		division();
+		int num1;
+		int num2;
 
 	}
 	public static void addition() {
