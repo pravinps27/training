@@ -45,20 +45,26 @@ public class GSTBillTest {
 								System.out.println("3. Puuri-Rs.55");
 								if (ps.hasNextInt()) {
 									int foodList = ps.nextInt();
-									if (foodList > 0) {
+									if (foodList > 0&&foodList<=3) {
 										if (foodList == 1) {
 											System.out.println("How many idly you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println("Idly- "+orderCount);
-												total1=orderCount*20;		//total ordered amount
-												System.out.println("Total="+total1);	//print order amount
-												//System.out.println("GST 5%");
-												//float billAmount=(total1+((total1)*5/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
+												if(orderCount>0) {
+													
+													System.out.println("Idly- "+orderCount);
+													total1=orderCount*20;		//total ordered amount
+													System.out.println("Total=Rs."+total1);	//print order amount
+													//System.out.println("GST 5%");
+													//float billAmount=(total1+((total1)*5/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+												}
 												
 												
 												
@@ -71,15 +77,22 @@ public class GSTBillTest {
 											System.out.println("How many Dosa you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println("Dosa- "+orderCount);
-												total2=orderCount*40;		//total ordered amount
-												System.out.println("Total="+total2);	//print order amount
-												//System.out.println("GST 5%");
-												//float billAmount=(total2+((total2)*5/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
+												if(orderCount>0) {
+													
+													System.out.println("Dosa- "+orderCount);
+													total2=orderCount*40;		//total ordered amount
+													System.out.println("Total=Rs."+total2);	//print order amount
+													//System.out.println("GST 5%");
+													//float billAmount=(total2+((total2)*5/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 												
@@ -92,15 +105,22 @@ public class GSTBillTest {
 											System.out.println("How many puuri you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println("Puuri- "+orderCount);
-												total3=orderCount*55;		//total ordered amount
-												System.out.println("Total="+total3);	//print order amount
-												//System.out.println("GST 5%");
-												//float billAmount=(total3+((total3)*5/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
+												if(orderCount>0) {
+													
+													System.out.println("Puuri- "+orderCount);
+													total3=orderCount*55;		//total ordered amount
+													System.out.println("Total=Rs."+total3);	//print order amount
+													//System.out.println("GST 5%");
+													//float billAmount=(total3+((total3)*5/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 												
@@ -110,21 +130,27 @@ public class GSTBillTest {
 											
 										}
 										
-									} else {
+									} 
+									
+									else {
 										System.out.println("Please choose only above list!");
 									}
-								} else {
+								} 
+								else {
 									System.out.println("Please enter only valid list!");
+									
 								}
 								System.out.println("Do you want add more?");
 								rply=ps.next();
 							}
 							while(rply.equals("yes"));
+							System.out.println("------------------------------------------------------------");
+
 							System.out.println("GST 5%");
-							int total=(total1+total2+total3);
-							System.out.println("Total Amount="+total);
-							float billAmount=(total+((total)*5/100));
-							System.out.println("Bill Amount="+billAmount);
+							int total=(total1+total2+total3);		//total of amount
+							System.out.println("Total Amount=Rs."+total);
+							float billAmount=(total+((total)*5/100));		//GST calculation
+							System.out.println("Bill Amount=Rs."+billAmount);
 							
 							break;
 						}//case 1 end
@@ -142,16 +168,22 @@ public class GSTBillTest {
 											System.out.println("Sugar how many Kg you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total1=orderCount*40;		//total ordered amount
-												System.out.println("Total="+total1);	//print order amount
-												//System.out.println("GST 18%");
-												//float billAmount=(total1+((total1)*18/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Sugar-"+orderCount+"Kg");
+													total1=orderCount*40;		//total ordered amount
+													System.out.println("Total=Rs."+total1);	//print order amount
+													//System.out.println("GST 18%");
+													//float billAmount=(total1+((total1)*18/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 											} else {
@@ -163,16 +195,22 @@ public class GSTBillTest {
 											System.out.println("Dhal how many Kg you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total2=orderCount*60;		//total ordered amount
-												System.out.println("Total="+total2);	//print order amount
-												//System.out.println("GST 18%");
-												//float billAmount=(total2+((total2)*18/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Dhal-"+orderCount+"Kg");
+													total2=orderCount*60;		//total ordered amount
+													System.out.println("Total=Rs."+total2);	//print order amount
+													//System.out.println("GST 18%");
+													//float billAmount=(total2+((total2)*18/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 											} else {
@@ -184,15 +222,22 @@ public class GSTBillTest {
 											System.out.println("Rice how many Kg you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total3=orderCount*80;		//total ordered amount
-												System.out.println("Total="+total3);	//print order amount
-												//System.out.println("GST 18%");
-												//float billAmount=(total3+((total3)*18/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
+												if(orderCount>0) {
+													
+													System.out.println("Rice-"+orderCount+"Kg");
+													total3=orderCount*80;		//total ordered amount
+													System.out.println("Total=Rs."+total3);	//print order amount
+													//System.out.println("GST 18%");
+													//float billAmount=(total3+((total3)*18/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 												
@@ -212,11 +257,13 @@ public class GSTBillTest {
 								rply=ps.next();
 							}
 							while(rply.equals("yes"));
+							System.out.println("------------------------------------------------------------");
+
 							System.out.println("GST 18%");
 							int total=(total1+total2+total3);
-							System.out.println("Total Amount="+total);
+							System.out.println("Total Amount=Rs."+total);
 							float billAmount=(total+((total)*18/100));
-							System.out.println("Bill Amount="+billAmount);
+							System.out.println("Bill Amount=Rs."+billAmount);
 							
 							
 						}	//case 2 end
@@ -236,16 +283,22 @@ public class GSTBillTest {
 											System.out.println("How many shirt you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total1=orderCount*700;		//total ordered amount
-												System.out.println("Total="+total1);	//print order amount
-												//System.out.println("GST 12%");
-												//float billAmount=(total1+((total1)*12/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Shirt-"+orderCount);
+													total1=orderCount*700;		//total ordered amount
+													System.out.println("Total=Rs."+total1);	//print order amount
+													//System.out.println("GST 12%");
+													//float billAmount=(total1+((total1)*12/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 											} else {
@@ -257,16 +310,22 @@ public class GSTBillTest {
 											System.out.println("How many phant you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total2=orderCount*1200;		//total ordered amount
-												System.out.println("Total="+total2);	//print order amount
-												//System.out.println("GST 12%");
-												//float billAmount=(total2+((total2)*12/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Phant-"+orderCount);
+													total2=orderCount*1200;		//total ordered amount
+													System.out.println("Total=Rs."+total2);	//print order amount
+													//System.out.println("GST 12%");
+													//float billAmount=(total2+((total2)*12/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 											} else {
@@ -278,16 +337,22 @@ public class GSTBillTest {
 											System.out.println("How many blazer jacket you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total3=orderCount*2000;		//total ordered amount
-												System.out.println("Total="+total3);	//print order amount
-												//System.out.println("GST 12%");
-												//float billAmount=(total3+((total3)*12/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Blazer jacket-"+orderCount);
+													total3=orderCount*2000;		//total ordered amount
+													System.out.println("Total=Rs."+total3);	//print order amount
+													//System.out.println("GST 12%");
+													//float billAmount=(total3+((total3)*12/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 											} else {
@@ -306,11 +371,13 @@ public class GSTBillTest {
 								rply=ps.next();
 							}
 							while(rply.equals("yes"));
+							System.out.println("------------------------------------------------------------");
+
 							System.out.println("GST 12%");
 							int total=(total1+total2+total3);
-							System.out.println("Total Amount="+total);
+							System.out.println("Total Amount=Rs."+total);
 							float billAmount=(total+((total)*12/100));
-							System.out.println("Bill Amount="+billAmount);
+							System.out.println("Bill Amount=Rs."+billAmount);
 							
 						}	//case 3 end
 						break;
@@ -329,16 +396,22 @@ public class GSTBillTest {
 											System.out.println("How many sofa you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total1=orderCount*15000;		//total ordered amount
-												System.out.println("Total="+total1);	//print order amount
-												//System.out.println("GST 12%");
-												//float billAmount=(total1+((total1)*12/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Sofa-"+orderCount);
+													total1=orderCount*15000;		//total ordered amount
+													System.out.println("Total=Rs."+total1);	//print order amount
+													//System.out.println("GST 12%");
+													//float billAmount=(total1+((total1)*12/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 											} else {
@@ -350,16 +423,22 @@ public class GSTBillTest {
 											System.out.println("How many bed you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total2=orderCount*8000;		//total ordered amount
-												System.out.println("Total="+total2);	//print order amount
-												//System.out.println("GST 12%");
-												//float billAmount=(total2+((total2)*12/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Bed-"+orderCount);
+													total2=orderCount*8000;		//total ordered amount
+													System.out.println("Total=Rs."+total2);	//print order amount
+													//System.out.println("GST 12%");
+													//float billAmount=(total2+((total2)*12/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}	
 												
 												
 												
@@ -372,16 +451,22 @@ public class GSTBillTest {
 											System.out.println("How many dinning table you ordered:");
 											if (ps.hasNextInt()) {
 												int orderCount=ps.nextInt();
-												System.out.println(name);
-												total3=orderCount*6000;		//total ordered amount
-												System.out.println("Total="+total3);	//print order amount
-												//System.out.println("GST 12%");
-												//float billAmount=(total3+((total3)*12/100));//bill amount
-												//System.out.println("Bill Amount="+billAmount);
-												int coupon=(int)((float)Math.random()*100);
-												//System.out.println("Coupon id:"+coupon);
-												//System.out.println("**Thank you visit again**");
-												
+												if(orderCount>0) {
+													
+													System.out.println("Dinning table-"+orderCount);
+													total3=orderCount*6000;		//total ordered amount
+													System.out.println("Total=Rs."+total3);	//print order amount
+													//System.out.println("GST 12%");
+													//float billAmount=(total3+((total3)*12/100));//bill amount
+													//System.out.println("Bill Amount="+billAmount);
+													int coupon=(int)((float)Math.random()*100);
+													//System.out.println("Coupon id:"+coupon);
+													//System.out.println("**Thank you visit again**");
+												}
+												else {
+													System.out.println("Kindly give positive count");
+
+												}
 												
 												
 												
@@ -401,11 +486,13 @@ public class GSTBillTest {
 								rply=ps.next();
 							}
 							while(rply.equals("yes"));
+							System.out.println("------------------------------------------------------------");
+
 							System.out.println("GST 12%");
 							int total=(total1+total2+total3);
-							System.out.println("Total Amount="+total);
+							System.out.println("Total Amount=Rs."+total);
 							float billAmount=(total+((total)*12/100));
-							System.out.println("Bill Amount="+billAmount);
+							System.out.println("Bill Amount=Rs."+billAmount);
 							
 						}	//case 4 end
 						break;
