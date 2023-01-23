@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+</head>
+
+<body>
+    <h2>Welcome to Seetha Foundation</h2>
+    <h2>Heartly appriciate your step into become a part of helping motive </h2>
+    <form id="donor-register" name="donor-registration" onsubmit="formValidate()" action="donor-page.html">
+        Enter your name: <input type="text" placeholder="your name" name="donor name" required id="donorName"><br>
+        Enter your Phone no.:<input type="tel" placeholder="10 digit phone no." name="phone number" required
+            id="donorPhone"><br>
+        Enter your Aadhar no.:<input type="number" placeholder="12 digit aadhar no." name="aadhar number" required
+            id="donorAadhar"><br>
+        Enter your Mail id:<input type="email" placeholder="example@domain.com" name="mail" required id="donorMail"><br>
+        Enter your Password:<input type="password" placeholder="password" name="password" required
+            id="donorPassword"><br>
+        Confrim your Password:<input type="password" placeholder="password" name="password" required
+            id="confrimPassword"><br>
+        <label for="Zone">Enter your Zone Id:</label>
+        <select name="Zone" id="zoneId">
+
+            <option value="tn47">Karur-tn47</option>
+            <option value="tn01">Chennai-tn01</option>
+            <option value="tn45">Trichy-tn45</option>
+        </select><br>
+        Enter your Account no.:<input type="number" placeholder="account no." name="account number" required
+            id="donorAccount"><br>
+        <button type="submit">Register now</button>
+    </form>
+    <script>
+        function formValidate() {
+            event.preventDefault(); //to prevent default behaviour of navigation to next page 
+            let name = document.querySelector("#donorName").value;
+            let phoneStr = document.querySelector("#donorPhone").value;
+            let phone = parseInt(phoneStr);
+            let aadharStr = document.querySelector("#donorAadhar").value;
+            let aadhar = parseInt(aadharStr);
+            let mail = document.querySelector("#donorMail").value;
+            let password = document.querySelector("#donorPassword").value;
+            let cpassword = document.querySelector("#confrimPassword").value;
+            let accountStr = document.querySelector("#donorAccount").value;
+            let account = parseInt(accountStr);
+            try {
+
+                
+                if (name == null || name.trim() ==""||name.length<3) {
+                    throw new Error("User name must not be empty or atleast 3 character!");
+                }
+                else if (phone<0) {
+                    
+                    throw new Error("Phone number must be possitive!");
+                    
+                }
+                else if(phoneStr.length!=10){
+                    throw new Error("Phone number must be 10 digits!");
+                    
+                }
+                else if(aadharStr.length<12 || aadharStr.length>12){
+                    throw new Error("Aadhar number must be 12 digit!");
+                    
+                }
+                else if(mail.length<7){
+                    throw new Error("Mail id must not be empty or atleast 8 character!");
+                    
+                }
+                else if(password.length<7){
+                    throw new Error("Password must not be empty or atleast 8 character!");
+                    
+                }
+                else if(cpassword !=password){
+                    throw new Error("Password and confrim password mismatch!");
+                    
+                }
+                else if (account<0) {
+                    
+                    throw new Error("Account number must be possitive!");
+                    
+                }
+                else if(accountStr.length!=13){
+                    throw new Error("Phone number must be 13 digits!");
+                    
+                }
+                
+
+                
+
+                alert("welcome " + name)
+                let form = document.querySelector("#donor-register");
+                form.submit();
+            }
+            catch (err) {
+                console.error(err);
+                console.log("Validation Failed:" + err.message);
+                alert("Error:" + err.message)
+            }
+        }
+    </script>
+</body>
+
+</html>
